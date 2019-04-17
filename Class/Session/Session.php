@@ -8,5 +8,32 @@
 
 class Session
 {
+    public $attribut = [];
+    /**
+     * @return array
+     */
+    function add ($key, $value)
+    {
+        $this->attribut[$key] = $value;
+    }
 
+    function update($key, $value)
+    {
+        $this->attribut[$key] = $value;
+    }
+
+    function __set($name, $value)
+    {
+        $this->add($name,$value);
+    }
+
+    function __get($name)
+    {
+       echo $this->attribut[$name];
+    }
+
+    public function getAttribut()
+    {
+        return $this->attribut;
+    }
 }
