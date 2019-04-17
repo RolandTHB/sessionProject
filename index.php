@@ -25,6 +25,10 @@ var_dump('je le supprime');
 unset($session->username);
 var_dump('ici il n\'existe plus');
 var_dump(isset($session->username));
+echo"<h5>Serialize</h5>";
+echo"serialize chien".serialize($newSession);
+echo"<h5>Deserialize</h5>";
+var_dump(unserialize(serialize($newSession)));
 ?>
 <hr/>
 <footer>Made by Roland Tabet</footer>

@@ -8,6 +8,11 @@
 
 class Session {
     private $attributs = [];
+    public function __construct()
+    {
+        session_start();
+    }
+
     public function add($key, $valeur){
     }
     public function update($key, $valeur){
