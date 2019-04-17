@@ -6,34 +6,30 @@
  * Time: 11:28
  */
 
-class Session
-{
-    public $attribut = [];
-    /**
-     * @return array
-     */
-    function add ($key, $value)
-    {
-        $this->attribut[$key] = $value;
+class Session {
+    private $attributs = [];
+    public function add($key, $valeur){
     }
-
-    function update($key, $value)
-    {
-        $this->attribut[$key] = $value;
+    public function update($key, $valeur){
     }
-
-    function __set($name, $value)
-    {
-        $this->add($name,$value);
+    public function exist($key){
     }
-
-    function __get($name)
-    {
-       echo $this->attribut[$name];
+    public function remove($key){
     }
-
-    public function getAttribut()
+    public function __set($name, $value)
     {
-        return $this->attribut;
+        $this->attributs[$name] = $value;
+    }
+    public function __get($name)
+    {
+        return $this->attributs[$name];
+    }
+    public function __isset($name)
+    {
+        return isset($this->attributs[$name]);
+    }
+    public function __unset($name)
+    {
+        unset($this->attributs[$name]);
     }
 }
