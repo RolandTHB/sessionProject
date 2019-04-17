@@ -6,4 +6,4 @@
  * Time: 11:35
  */
 
-include 'Class/Session.php';
+include 'Class/Session/Session.php';
