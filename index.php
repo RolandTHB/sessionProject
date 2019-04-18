@@ -22,6 +22,8 @@ $newSession->rx4 = $rx4;
 $z600 = new Kawasaki('Kawasaki',14444,2);
 $newSession->z600 = $z600;
 
+$y44 = new Kawasaki("Kawasaki", 14444, 2);
+
 var_dump("ajouté en session !!");
 //methodes magique isset et unset
 echo"<h5>Methodes magiques isset et unset</h5>";

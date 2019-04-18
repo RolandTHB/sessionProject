@@ -13,6 +13,7 @@ include 'Interface/VoitureInterface.php';
 include 'Interface/AudiInterface.php';
 include 'Interface/MotoInterface.php';
 include 'Interface/KawasakiInterface.php';
+include 'Interface/YamahaInterface.php';
 include 'Exception/MotoException.php';
 include 'Exception/VoitureException.php';
 include 'Class/Vehicule.php';
@@ -20,4 +21,6 @@ include 'Class/Voiture.php';
 include 'Class/Moto.php';
 include 'Class/Audi.php';
 include 'Class/Kawasaki.php';
+include 'Class/Yamaha.php';
+
 
