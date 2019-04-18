@@ -8,7 +8,6 @@
 
 include 'include.php';
 
-
 $session = new Session();
 foreach ($session->getAttributs() as $attr) {
     var_dump(unserialize($attr));

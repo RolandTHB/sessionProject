@@ -19,19 +19,23 @@ echo"<h5>affiche le get : $newSession->password</h5>";
 $rx4 = new Audi('Audi','RX4',4,1,4,0);
 $newSession->rx4 = $rx4;
 
+$z600 = new Kawasaki('Kawasaki',14444,2);
+$newSession->z600 = $z600;
+
 var_dump("ajouté en session !!");
-//$session = new Session();
-//$session->username = 'Aurélien';
-//var_dump('ici mon attribut existe');
-//var_dump(isset($session->username));
-//var_dump('je le supprime');
-//unset($session->username);
-//var_dump('ici il n\'existe plus');
-//var_dump(isset($session->username));
+
+echo"<h5>Methodes magiques isset et unset</h5>";
+$newSession->username = 'Aurélien';
+var_dump('ici mon attribut existe');
+var_dump(isset($newSession->username));
+var_dump('je le supprime');
+unset($newSession->username);
+var_dump('ici il n\'existe plus');
+var_dump(isset($newSession->username));
 
 echo"<h5>Serialize</h5>";
 
-echo"serialize : ".serialize($newSession);
+echo"serialize :<br/> ".serialize($newSession);
 
 echo"<h5>Deserialize</h5>";
 

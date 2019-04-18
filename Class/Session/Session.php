@@ -43,7 +43,7 @@ et sauvegarde les donnees de session*/
     public function remove($key){
     }
     // permet de detecter la modification d'un attribut qui n'existe pas ou qui est privé
-    // prend en parametre 2 arguments le nom de l'argumet et la valeur qu'on tente de lui passer
+    // prend en parametre 2 arguments le nom de l'argument et la valeur qu'on tente de lui passer
     public function __set($name, $value)
     {
         // met le argument name dans le tableau atributs et serialize la valeur
