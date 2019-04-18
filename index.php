@@ -14,20 +14,27 @@ include 'include.php';
 $newSession = new Session();
 var_dump($newSession);
 $newSession->password = "Flash";
-var_dump($newSession);
 echo"<h5>affiche le get : $newSession->password</h5>";
 
-$session = new Session();
-$session->username = 'Aurélien';
-var_dump('ici mon attribut existe');
-var_dump(isset($session->username));
-var_dump('je le supprime');
-unset($session->username);
-var_dump('ici il n\'existe plus');
-var_dump(isset($session->username));
+$rx4 = new Audi('Audi','RX4',4,1,4,0);
+$newSession->rx4 = $rx4;
+
+var_dump("ajouté en session !!");
+//$session = new Session();
+//$session->username = 'Aurélien';
+//var_dump('ici mon attribut existe');
+//var_dump(isset($session->username));
+//var_dump('je le supprime');
+//unset($session->username);
+//var_dump('ici il n\'existe plus');
+//var_dump(isset($session->username));
+
 echo"<h5>Serialize</h5>";
-echo"serialize chien".serialize($newSession);
+
+echo"serialize : ".serialize($newSession);
+
 echo"<h5>Deserialize</h5>";
+
 var_dump(unserialize(serialize($newSession)));
 ?>
 <hr/>
