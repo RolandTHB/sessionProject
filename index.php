@@ -23,7 +23,7 @@ $z600 = new Kawasaki('Kawasaki',14444,2);
 $newSession->z600 = $z600;
 
 var_dump("ajouté en session !!");
-
+//methodes magique isset et unset
 echo"<h5>Methodes magiques isset et unset</h5>";
 $newSession->username = 'Aurélien';
 var_dump('ici mon attribut existe');
